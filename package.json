@@ -1,0 +1,29 @@
+{
+  "name": "cemtp-browser",
+  "version": "1.0.0",
+  "description": "A JS browser implementation of the CEMTP (Client-side Encrypted Mail Transfer Protocol) protocol.",
+  "module": "dist/index.js",
+  "main": "dist/index.cjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "browser": "./dist/index.js",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "openpgp": "^5.9.0"
+  },
+  "devDependencies": {
+    "tsup": "^7.1.0",
+    "typescript": "^4.9.5"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepublish": "yarn run build"
+  }
+}
